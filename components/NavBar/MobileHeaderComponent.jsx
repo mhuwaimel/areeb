@@ -84,7 +84,7 @@ export default function MobileHeaderComponent({
             </Flex>
           </DrawerBody>
 
-          <DrawerFooter justifyContent="center">
+          <DrawerFooter mb={7} justifyContent="center">
             <div className="flex items-center justify-center p-5">
               <ThemeToggleButton></ThemeToggleButton>
             </div>

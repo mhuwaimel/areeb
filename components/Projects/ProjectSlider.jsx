@@ -12,8 +12,10 @@ import {
   useBreakpointValue,
   useColorModeValue,
 } from "@chakra-ui/react";
+import { useRouter } from "next/router";
 
 const ProjectSlider = () => {
+  const router = useRouter();
   const colorBrand = useColorModeValue("#4c5353", "gray.800");
   const textsizeC = useBreakpointValue({ base: "sm", md: "md" });
   const color1 = useColorModeValue("#4c5353", "#4c5353");
@@ -67,7 +69,10 @@ const ProjectSlider = () => {
         <Swiper {...sliderSittings}>
           <SwiperButtons />
           {sliderData.map((card, index) => (
-            <SwiperSlide key={index}>
+            <SwiperSlide
+              onClick={() => router.push(`/projects/${card.name}`)}
+              key={index}
+            >
               <div className="gap-3 p-4 m-auto transition-all ease-in-out cursor-pointer swiper-card bg-gray-50 dark:bg-black/10 flexColStart hover:scale-105 rounded-2xl max-w-max">
                 <Image
                   className="max-w-[15rem] w-full"

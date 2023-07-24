@@ -6,7 +6,7 @@ const projects = () => {
   return (
     <div>
       <Seo pageTitle={"مشاريعنا"}></Seo>
-      <ProjectSlider></ProjectSlider>
+      <ProjectSlider></ProjectSlider>.
     </div>
   );
 };
