@@ -12,12 +12,12 @@ export default function Footer() {
     <Box
       bg={useColorModeValue("gray.100", "gray.700")}
       color={useColorModeValue("#4c5353", "#F2F4CD")}
-      sx={{
-        // position: "-webkit-sticky",
-        // /* Safari */ position: "sticky",
-        bottom: "0",
-        left: 0,
-      }}
+      // sx={{
+      //   position: "-webkit-sticky",
+      //   /* Safari */ position: "f",
+      //   bottom: "0",
+      //   left: 0,
+      // }}
     >
       <Container
         as={Stack}

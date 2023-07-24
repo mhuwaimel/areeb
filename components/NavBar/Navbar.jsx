@@ -51,6 +51,7 @@ export default function NavBar() {
         left={0}
         right={0}
         position="fixed"
+        zIndex={"999"}
         backdropFilter={{
           base: "none",
           lg: isScrolled ? "blur(1.25rem)" : "none",

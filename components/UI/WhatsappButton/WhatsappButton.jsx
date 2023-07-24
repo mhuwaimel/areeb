@@ -9,7 +9,7 @@ const WhatsappButton = () => {
       <a
         href="https://wa.me/966537621261"
         target="blank"
-        className="fixed left-2 md:bottom-2/4 bottom-1/4 "
+        className="fixed left-2 md:bottom-2/4 bottom-1/4 z-[1000]"
       >
         <AiOutlineWhatsApp
           color={iconColor}
