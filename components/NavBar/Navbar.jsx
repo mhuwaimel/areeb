@@ -36,11 +36,11 @@ export default function NavBar() {
   const onClickHandleActiveNavigation = (href) => {
     setActiveNavigationLink(href);
   };
-  // React.useEffect(() => {
-  //   window.addEventListener("scroll", () => {
-  //     window.scrollY > 50 ? setIsScrolled(true) : setIsScrolled(false);
-  //   });
-  // }, []);
+  React.useEffect(() => {
+    window.addEventListener("scroll", () => {
+      window.scrollY > 50 ? setIsScrolled(true) : setIsScrolled(false);
+    });
+  }, []);
 
   return (
     <React.Fragment>
@@ -110,7 +110,7 @@ export default function NavBar() {
                     }`}
                     color={colorBrand}
                     fontWeight="medium"
-                    fontSize="1rem"
+                    fontSize="1.1rem"
                     scroll={false}
                     _hover={{
                       color: "primary",

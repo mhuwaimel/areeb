@@ -26,7 +26,7 @@ export default function WithBackgroundImage() {
           w={"full"}
           justify={"center"}
           align={"center"}
-          px={useBreakpointValue({ base: 4, md: 8 })}
+          // px={useBreakpointValue({ base: 4, md: 8 })}
           bgGradient={"linear(to-r, blackAlpha.600, transparent)"}
         >
           <Stack maxW={"2xl"} align={"flex-start"} spacing={6}>
