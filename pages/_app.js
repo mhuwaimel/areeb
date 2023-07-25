@@ -25,7 +25,7 @@ export default function App({ Component, pageProps }) {
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
       />
-      <Script
+      {/* <Script
         id="gtag-init"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
@@ -38,7 +38,16 @@ export default function App({ Component, pageProps }) {
             });
           `,
         }}
-      />
+      /> */}
+      <Script id="gtag-init" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', '${gtag.GA_TRACKING_ID}');
+        `}
+      </Script>
       <ChakraProvider theme={customTheme}>
         <RootLayout>
           <Component {...pageProps} />
