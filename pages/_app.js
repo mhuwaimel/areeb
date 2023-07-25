@@ -2,8 +2,6 @@ import RootLayout from "@/components/Layout/RootLayout";
 import "@/styles/globals.css";
 import customTheme from "@/styles/theme";
 import { ChakraProvider } from "@chakra-ui/react";
-
-import Head from "next/head";
 import { useRouter } from "next/router";
 import "swiper/css";
 
