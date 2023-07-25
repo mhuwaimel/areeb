@@ -17,7 +17,7 @@ import { TbActivityHeartbeat } from "react-icons/tb";
 import { PiExcludeBold } from "react-icons/pi";
 import { SiSololearn } from "react-icons/si";
 import Seo from "@/components/common/Seo";
-
+import { NextSeo } from "next-seo";
 const features = [
   {
     heading: "الملكية والنشاط",
@@ -42,7 +42,6 @@ const features = [
     icon: MdOutlinePersonPin,
   },
 ];
-import { NextSeo } from "next-seo";
 
 const Features = () => {
   const colorBrand = useColorModeValue("#4c5353", "#F2F4CD");
