@@ -17,11 +17,28 @@ import {
   Box,
 } from "@chakra-ui/react";
 import React from "react";
+import { NextSeo } from "next-seo";
 
 const advertise = () => {
   return (
     <div>
       <Seo pageTitle={"أعلن عن عقارك"}></Seo>
+      <NextSeo
+        title=" أعلن عن عقارك "
+        description="يمكنكم الإعلان عن عقاركم مع مساكن عريب "
+        openGraph={{
+          type: "",
+
+          url: "whttps://mareeb.vercel.app/advertise",
+          images: {
+            url: "https://mareeb.vercel.app/images/img/kitchen-2400367_1920.jpg",
+            width: 800,
+            height: 600,
+            alt: "مساكن عريب الغقارية |  أعلن عن عقارك",
+          },
+          site_name: "مساكن عريب العقارية",
+        }}
+      />
       <Container maxW="7xl" py={10} px={{ base: 5, md: 8 }}>
         <Box align="center" justify="center" direction="row">
           <Box transition="background-color 300ms">

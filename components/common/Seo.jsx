@@ -8,8 +8,11 @@ const Seo = ({ pageTitle }) => (
       ) : (
         <title>{` مساكن عريب العقارية`}</title>
       )}
-
-      <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+      <meta
+        name="keywords"
+        content="مساكن عريب العقارية ,عقارات الرياض ,مشاريع عقارية ,عقارات شمال الرياض ,السوق العقاري "
+      />
+      {/* <meta httpEquiv="x-ua-compatible" content="ie=edge" />
       <meta
         name="keywords"
         content="مساكن عريب العقارية ,عقارات الرياض ,مشاريع عقارية ,عقارات شمال الرياض ,السوق العقاري "
@@ -24,7 +27,7 @@ const Seo = ({ pageTitle }) => (
         content="مساكن عريب العقارية- استثمار ونماء في مجال بناء وتملك الوحدات السكنية، مستمرون من خبراتنا الممتدة منذ عشرات السنوات في السوق العقاري."
       />
       {/* <link rel="canonical" href="https://safainv.sa/" /> */}
-      <meta property="og:locale" content="ar_AR" />
+      {/* <meta property="og:locale" content="ar_AR" />
       <meta property="og:type" content="website" />
       <meta
         property="og:title"
@@ -33,7 +36,7 @@ const Seo = ({ pageTitle }) => (
       <meta
         property="og:description"
         content="مساكن عريب العقارية  - استثمار ونماء في مجال بناء وتملك الوحدات السكنية، مستمرون من خبراتنا الممتدة منذ عشرات السنوات في السوق العقاري."
-      />
+      /> */}
 
       <link rel="icon" href="/favicon.ico" />
     </Head>

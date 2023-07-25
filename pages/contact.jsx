@@ -20,11 +20,11 @@ import { GoLocation } from "react-icons/go";
 import { BsPhone } from "react-icons/bs";
 import { HiOutlineMail } from "react-icons/hi";
 import Seo from "@/components/common/Seo";
-
+import { NextSeo } from "next-seo";
 const contactOptions = [
   {
     label: "العنوان",
-    value: "الرياض , طريق الملك فهد ",
+    value: "الرياض ,حي العارض - شارع إبراهيم الصديقي 7626 ",
     icon: GoLocation,
   },
   {
@@ -44,6 +44,22 @@ const Contact = () => {
   return (
     <>
       <Seo pageTitle={"تواصل معنا"}></Seo>
+      <NextSeo
+        title=" تواصل معنا "
+        description="مساكن عريب الغقارية |  تواصل معنا"
+        openGraph={{
+          type: "",
+
+          url: "whttps://mareeb.vercel.app/contact",
+          images: {
+            url: "https://mareeb.vercel.app/images/img/kitchen-2400367_1920.jpg",
+            width: 800,
+            height: 600,
+            alt: "مساكن عريب الغقارية | مشاريعنا العقارية",
+          },
+          site_name: "مساكن عريب العقارية",
+        }}
+      />
       <Container maxW="7xl" py={10} px={{ base: 5, md: 8 }}>
         <Stack spacing={10}>
           <Flex align="center" justify="center" direction="column">

@@ -1,5 +1,6 @@
 import ProjectSlider from "@/components/Projects/ProjectSlider";
 import Seo from "@/components/common/Seo";
+import { NEXT_SEO_DEFAULT } from "@/next-seo.config";
 import {
   Stack,
   Flex,
@@ -10,11 +11,13 @@ import {
   Divider,
   Box,
 } from "@chakra-ui/react";
+import { NextSeo } from "next-seo";
 
-export default function WithBackgroundImage() {
+export default function Home() {
   return (
     <>
       <Seo pageTitle=""></Seo>
+      <NextSeo {...NEXT_SEO_DEFAULT} useAppDir={true} />
       <Flex
         w={"full"}
         h={"100vh"}

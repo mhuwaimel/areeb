@@ -42,11 +42,28 @@ const features = [
     icon: MdOutlinePersonPin,
   },
 ];
+import { NextSeo } from "next-seo";
 
 const Features = () => {
   const colorBrand = useColorModeValue("#4c5353", "#F2F4CD");
   return (
     <>
+      <NextSeo
+        title="  تعرف علينا "
+        description="مساكن عريب الغقارية |   تعرف علينا"
+        openGraph={{
+          type: "",
+
+          url: "whttps://mareeb.vercel.app/about",
+          images: {
+            url: "https://mareeb.vercel.app/images/kitchen-2400367_1920.jpg",
+            width: 800,
+            height: 600,
+            alt: "مساكن عريب الغقارية |   تعرف علينا",
+          },
+          site_name: "مساكن عريب العقارية",
+        }}
+      />
       <Seo pageTitle={"تعرف علينا"} />
       <Container maxW="6xl" p={{ base: 5, md: 10 }}>
         <chakra.h3

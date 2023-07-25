@@ -8,6 +8,9 @@ import { useRouter } from "next/router";
 import { animations } from "@/utils/animations";
 import AnimSwitcher from "@/utils/AnimSwitcher";
 import { useState } from "react";
+import Head from "next/head";
+import { NextSeo } from "next-seo";
+
 const variants = {
   out: {
     opacity: 0,
@@ -25,48 +28,66 @@ export default function RootLayout({ children }) {
   const [animation, setAnimation] = useState(animations[startIndex]);
   const [exitBefore, setExitBefore] = useState(false);
   const router = useRouter();
-  const { pathname } = useRouter();
+
   return (
-    <Box>
-      <div
-        className={`flex flex-col min-h-screen  ${fonts} transition-all ease-in `}
-        dir="rtl"
-      >
-        {router.pathname === "/auth" ? null : <NavBar />}
-        {/* <div className="flex-grow">{children}</div> */}
-        <AnimSwitcher
-          anims={animations}
-          setAnimation={setAnimation}
-          setExitBeforeEnter={setExitBefore}
-          startIndex={startIndex}
+    <>
+      <Head>
+        <meta charSet="utf-8" />
+        <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        {/* 
+          Anything we add in layout will appear on EVERY PAGE. At present it can not be overridden lower down the tree.
+          This can be useful for things like favicons, or other meta tags that are the same on every page.
+        */}
+        <NextSeo
+          useAppDir={true}
+          themeColor="#4c5353"
+          titleTemplate="%s | مساكن عريب العقارية"
         />
+      </Head>
 
-        <LazyMotion features={domAnimation}>
-          <AnimatePresence mode={!exitBefore}>
-            <m.div
-              key={router.route.concat(animation.name)}
-              className="page-wrap"
-              initial="initial"
-              animate="animate"
-              exit="exit"
-              variants={animation.variants}
-              transition={animation.transition}
-            >
-              <Box
-                w="100vw"
-                display="flex"
-                className="max-w-full mt-20"
-                flexDirection="column"
+      <Box>
+        <div
+          className={`flex flex-col min-h-screen  ${fonts} transition-all ease-in `}
+          dir="rtl"
+        >
+          {router.pathname === "/auth" ? null : <NavBar />}
+          {/* <div className="flex-grow">{children}</div> */}
+          <AnimSwitcher
+            anims={animations}
+            setAnimation={setAnimation}
+            setExitBeforeEnter={setExitBefore}
+            startIndex={startIndex}
+          />
+
+          <LazyMotion features={domAnimation}>
+            <AnimatePresence mode={!exitBefore}>
+              <m.div
+                key={router.route.concat(animation.name)}
+                className="page-wrap"
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                variants={animation.variants}
+                transition={animation.transition}
               >
-                {children}
-              </Box>
-            </m.div>
-          </AnimatePresence>
-        </LazyMotion>
+                <Box
+                  w="100vw"
+                  display="flex"
+                  className="max-w-full mt-20"
+                  flexDirection="column"
+                >
+                  {children}
+                </Box>
+              </m.div>
+            </AnimatePresence>
+          </LazyMotion>
 
-        <WhatsappButton></WhatsappButton>
-        <Footer />
-      </div>
-    </Box>
+          <WhatsappButton></WhatsappButton>
+          <Footer />
+        </div>
+      </Box>
+    </>
   );
 }

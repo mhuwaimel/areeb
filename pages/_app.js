@@ -8,6 +8,9 @@ import Script from "next/script";
 import "swiper/css";
 import { useEffect } from "react";
 import * as gtag from "../utils/gtag";
+import { NextSeo } from "next-seo";
+import { NEXT_SEO_DEFAULT } from "@/next-seo.config";
+
 export default function App({ Component, pageProps }) {
   const router = useRouter();
   useEffect(() => {
@@ -48,6 +51,7 @@ export default function App({ Component, pageProps }) {
           gtag('config', '${gtag.GA_TRACKING_ID}');
         `}
       </Script>
+
       <ChakraProvider theme={customTheme}>
         <RootLayout>
           <Component {...pageProps} />
