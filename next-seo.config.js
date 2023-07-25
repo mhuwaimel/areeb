@@ -6,7 +6,7 @@ export const NEXT_SEO_DEFAULT = {
     type: "website",
     locale: "ar_SA",
     url: "https://mareeb.vercel.app/",
-    title: "OG Title",
+    title: "مساكن عريب العقارية",
     description:
       "حلول ابتكارية للقطاع العقاري والإسكاني والتجاري -  مساكن عريب العقارية",
     siteName: "شركة مساكن عريب العقارية",
