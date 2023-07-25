@@ -51,7 +51,7 @@ const Features = () => {
         title="  تعرف علينا "
         description="مساكن عريب الغقارية |   تعرف علينا"
         openGraph={{
-          type: "",
+          type: "website",
 
           url: "whttps://mareeb.vercel.app/about",
           images: {

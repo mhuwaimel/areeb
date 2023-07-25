@@ -27,7 +27,7 @@ const advertise = () => {
         title=" أعلن عن عقارك "
         description="يمكنكم الإعلان عن عقاركم مع مساكن عريب "
         openGraph={{
-          type: "",
+          type: "website",
 
           url: "whttps://mareeb.vercel.app/advertise",
           images: {

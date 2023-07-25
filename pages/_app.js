@@ -51,7 +51,7 @@ export default function App({ Component, pageProps }) {
           gtag('config', '${gtag.GA_TRACKING_ID}');
         `}
       </Script>
-
+      <NextSeo NEXT_SEO_DEFAULT></NextSeo>
       <ChakraProvider theme={customTheme}>
         <RootLayout>
           <Component {...pageProps} />
