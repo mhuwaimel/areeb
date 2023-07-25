@@ -1,4 +1,7 @@
+/* eslint-disable @next/next/inline-script-id */
+/* eslint-disable @next/next/no-script-component-in-head */
 import Head from "next/head";
+import Script from "next/script";
 
 const Seo = ({ pageTitle }) => (
   <>
@@ -36,6 +39,21 @@ const Seo = ({ pageTitle }) => (
       />
 
       <link rel="icon" href="/favicon.ico" />
+      <Script
+        strategy="lazyOnload"
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+      />
+
+      <Script strategy="lazyOnload">
+        {`
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+                    page_path: window.location.pathname,
+                    });
+                `}
+      </Script>
     </Head>
   </>
 );
