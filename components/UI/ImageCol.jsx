@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 const ImageCol = ({ src, ClassName }) => {
   return (
@@ -9,7 +9,10 @@ const ImageCol = ({ src, ClassName }) => {
         alt={"section Image"}
         width={400}
         height={400}
-      />
+        style={{
+          maxWidth: "100%",
+          height: "auto"
+        }} />
     </div>
   );
 };
