@@ -39,11 +39,12 @@ export default function Home() {
               lineHeight={1.2}
               fontSize={useBreakpointValue({ base: "xl", md: "2xl" })}
               className="font-almarai"
+              mr={{ base: 6, md: "none" }}
             >
               سهلناها لك ووفرنا لك أفضل الإستثمارات العقارية في المملكة بمعايير
               عالية أعتمد عليها مجموعة من الخبراء العقاريين
             </Text>
-            <Stack direction={"row"}>
+            <Stack direction={"row"} mr={{ base: 6, md: "none" }}>
               <Button
                 bg={"blue.400"}
                 rounded={"full"}
