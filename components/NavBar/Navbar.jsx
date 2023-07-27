@@ -75,7 +75,7 @@ export default function NavBar() {
             "2xl": "98rem",
           }}
           height={{
-            base: isScrolled ? "calc(3rem + 1rem)" : "calc(4rem + 1rem)",
+            base: isScrolled ? "calc(4rem + 1rem)" : "calc(5rem + 1rem)",
             md: isScrolled ? "calc(4rem + 1rem)" : "calc(5rem + 1rem)",
           }}
           transition="all 300ms"

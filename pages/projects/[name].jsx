@@ -16,7 +16,7 @@ import { sliderData } from "@/data";
 
 const Index = ({ data }) => {
   const { query } = useRouter();
-
+  const router = useRouter();
   return (
     <>
       <NextSeo
@@ -46,21 +46,24 @@ const Index = ({ data }) => {
           backgroundPosition={"center center"}
         >
           <VStack w={"full"} justify={"center"}>
-            <Stack maxW={"2xl"} align={"center"} className="-mt-44" spacing={6}>
+            <Stack maxW={"2xl"} align={"center"} className="-mt-56" spacing={6}>
               <Text
                 color={"white"}
                 fontWeight={700}
                 lineHeight={1.2}
+                className="font-almarai"
                 fontSize={useBreakpointValue({ base: "3xl", md: "4xl" })}
               >
                 {data[0].name}
               </Text>
-              <Stack direction={"column"}>
+              <Stack direction={"column"} mt={6}>
                 <Button
-                  bg={"whiteAlpha.300"}
+                  bg={"blue.400"}
+                  className="font-tajawal"
                   rounded={"full"}
                   color={"blackAlpha.700"}
-                  _hover={{ bg: "whiteAlpha.500" }}
+                  _hover={{ bg: "blue.500" }}
+                  onClick={() => router.back()}
                 >
                   الموقع على الخريطة
                 </Button>
