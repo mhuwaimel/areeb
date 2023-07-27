@@ -32,10 +32,6 @@ export default function RootLayout({ children }) {
   return (
     <>
       <Head>
-        <meta charSet="utf-8" />
-        <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
         {/* 
           Anything we add in layout will appear on EVERY PAGE. At present it can not be overridden lower down the tree.
           This can be useful for things like favicons, or other meta tags that are the same on every page.
