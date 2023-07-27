@@ -12,8 +12,10 @@ import {
   Box,
 } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
+import { useRouter } from "next/router";
 
 export default function Home() {
+  const router = useRouter();
   return (
     <>
       <Seo pageTitle=""></Seo>
@@ -50,6 +52,7 @@ export default function Home() {
                 rounded={"full"}
                 color={"white"}
                 className="font-alexandria"
+                onClick={() => router.push("/projects")}
                 _hover={{ bg: "blue.500" }}
               >
                 مشاريعنا

@@ -66,7 +66,7 @@ export default function MobileHeaderComponent({
                     fontFamily={"AraJozoor"}
                     key={`${title} - ${index}`}
                     href={`${href}`}
-                    className={`font-almarai border-b-2 border-transparent ${
+                    className={`i border-b-2 border-transparent ${
                       pathname === href ? "active" : ""
                     }`}
                     color={colorBrand}

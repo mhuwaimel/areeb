@@ -46,7 +46,7 @@ const ProjectSlider = () => {
   };
   return (
     <Container maxW={"7xl"} id="projects">
-      <div className="container mt-4 overflow-hidden paddings innerWidth">
+      <div className="container mt-4 h-[70dvh] overflow-hidden paddings innerWidth">
         <div className="flex flex-wrap items-center">
           <motion.div
             initial={{ y: "3rem", opacity: 0 }}
