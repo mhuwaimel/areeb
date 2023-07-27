@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+/* 
 @font-face {
     font-family: 'PlayfairDisplay';
     font-style: normal;
@@ -9,7 +9,7 @@
     font-display: swap;
     src: url(/fonts/2.woff2) format('woff2');
     unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC;
-}
+} */
 
 @font-face {
     font-family: 'AraJozoor';
@@ -20,24 +20,16 @@
     /* unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC; */
 }
 
+/* 
 @font-face {
     font-family: 'JF-Flat';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
     src: url(/fonts/JF-Flat-Regular.woff2) format('woff2');
-    /* unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC; */
-}
 
-@font-face {
-    font-family: "ReemKofibold";
-    font-style: normal;
-    font-weight: 500;
-    font-display: swap;
-    src: url(/fonts/ReemKufiFun-Bold.woff2) format('woff2');
-    /* unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC; */
-}
 
+*/
 .active {
     border-color: #502d40;
 

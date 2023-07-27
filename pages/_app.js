@@ -10,6 +10,7 @@ import { useEffect } from "react";
 import * as gtag from "../utils/gtag";
 import { NextSeo } from "next-seo";
 import { NEXT_SEO_DEFAULT } from "@/next-seo.config";
+import Head from "next/head";
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
@@ -27,6 +28,11 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
+      <Head>
+        <meta charSet="utf-8" />
+        <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Head>
       <NextSeo {...NEXT_SEO_DEFAULT} useAppDir={true} />
       <Script
         strategy="afterInteractive"
