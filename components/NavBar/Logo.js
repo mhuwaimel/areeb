@@ -9,7 +9,7 @@ import { useRouter } from "next/router";
 
 import logoLight from "@/public/Images/areeb_logo_w_light.png";
 import logoDark from "@/public/Images/areeb_logo_dark-svg.png";
-import Image from "next/image";
+import Image from "next/legacy/image";
 export default function Logo(props) {
   const router = useRouter();
   return (
