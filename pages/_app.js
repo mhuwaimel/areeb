@@ -16,11 +16,10 @@ export default function App({ Component, pageProps }) {
 
   useEffect(() => {
     const handleRouteChange = (url) => {
+      /* invoke analytics function only for production */
       gtag.pageview(url);
     };
-
     router.events.on("routeChangeComplete", handleRouteChange);
-
     return () => {
       router.events.off("routeChangeComplete", handleRouteChange);
     };
@@ -31,22 +30,17 @@ export default function App({ Component, pageProps }) {
       <NextSeo {...NEXT_SEO_DEFAULT} useAppDir={true} />
       <Script
         strategy="afterInteractive"
-        src="https://www.googletagmanager.com/gtag/js?id=G-Q0TWF20Y20"
-      ></Script>
-      <Script
-        id="google-analytics"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
+        src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
+      />
+      <Script id="gtag-init" strategy="afterInteractive">
+        {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'G-Q0TWF20Y20', {
-            page_path: window.location.pathname,
-          });
-        `,
-        }}
-      />
+
+          gtag('config', '${gtag.GA_TRACKING_ID}');
+        `}
+      </Script>
       {/*  */}
 
       <ChakraProvider theme={customTheme}>

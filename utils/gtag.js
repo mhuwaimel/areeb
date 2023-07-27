@@ -1,11 +1,11 @@
-export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS;
-
-export const pageview = () => {
-  window.gtag("config", GA_MEASUREMENT_ID, {
+export const GA_TRACKING_ID = "G-Q0TWF20Y20";
+export const pageview = (url) => {
+  window.gtag("config", GA_TRACKING_ID, {
     page_path: url,
   });
 };
 
+// https://developers.google.com/analytics/devguides/collection/gtagjs/events
 export const event = ({ action, category, label, value }) => {
   window.gtag("event", action, {
     event_category: category,

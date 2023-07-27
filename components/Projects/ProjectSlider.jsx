@@ -46,7 +46,7 @@ const ProjectSlider = () => {
   };
   return (
     <Container maxW={"7xl"} id="projects">
-      <div className="container overflow-hidden paddings innerWidth">
+      <div className="container mt-4 overflow-hidden paddings innerWidth">
         <div className="flex flex-wrap items-center">
           <motion.div
             initial={{ y: "3rem", opacity: 0 }}
@@ -70,7 +70,7 @@ const ProjectSlider = () => {
           <SwiperButtons />
           {sliderData.map((card, index) => (
             <SwiperSlide
-              onClick={() => router.push(`/projects/${card.name}`)}
+              onClick={() => router.push(`/projects/${card.id}`)}
               key={index}
             >
               <div className="gap-3 p-4 m-auto transition-all ease-in-out cursor-pointer swiper-card bg-gray-50 dark:bg-black/10 flexColStart hover:scale-105 rounded-2xl max-w-max">

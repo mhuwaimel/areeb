@@ -1,17 +1,27 @@
 import Seo from "@/components/common/Seo";
-import { Box, Container, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Container,
+  Flex,
+  Stack,
+  Text,
+  VStack,
+  useBreakpointValue,
+} from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import React from "react";
 import { NextSeo } from "next-seo";
+import { sliderData } from "@/data";
 
-const Index = () => {
+const Index = ({ data }) => {
   const { query } = useRouter();
 
   return (
     <>
       <NextSeo
-        title={query.name}
-        description={`مساكن عريب الغقارية |    ${query.name}`}
+        title={data[0].name}
+        description={`مساكن عريب الغقارية |    ${data[0].name}`}
         openGraph={{
           type: "",
 
@@ -26,22 +36,44 @@ const Index = () => {
         }}
       />
       <div>
-        <Seo pageTitle={query.name}></Seo>
-        <Container maxW="7xl" py={10} px={{ base: 5, md: 8 }}>
-          <Box height={"60vh"} align="center" justify="center" direction="row">
-            <Box transition="linear">
+        <Seo pageTitle={data[0].name}></Seo>
+
+        <Flex
+          w={"full"}
+          h={"100dvh"}
+          backgroundImage={"url(/project345678.webp)"}
+          backgroundSize={"cover"}
+          backgroundPosition={"center center"}
+        >
+          <VStack w={"full"} justify={"center"}>
+            <Stack maxW={"2xl"} align={"center"} className="-mt-44" spacing={6}>
               <Text
-                fontWeight={"bold"}
-                className="tracking-wide main-title font-tajawal text-md md:text-lgs"
+                color={"white"}
+                fontWeight={700}
+                lineHeight={1.2}
+                fontSize={useBreakpointValue({ base: "3xl", md: "4xl" })}
               >
-                {query.name}
+                {data[0].name}
               </Text>
-            </Box>
-          </Box>
-        </Container>
+              <Stack direction={"column"}>
+                <Button
+                  bg={"whiteAlpha.300"}
+                  rounded={"full"}
+                  color={"blackAlpha.700"}
+                  _hover={{ bg: "whiteAlpha.500" }}
+                >
+                  الموقع على الخريطة
+                </Button>
+              </Stack>
+            </Stack>
+          </VStack>
+        </Flex>
       </div>
     </>
   );
 };
-
+export async function getServerSideProps(context) {
+  var newArray = sliderData.filter((item) => item.id == context.query.name);
+  return { props: { data: newArray } };
+}
 export default Index;

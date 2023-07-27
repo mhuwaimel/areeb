@@ -75,7 +75,7 @@ export default function RootLayout({ children }) {
                 <Box
                   w="100vw"
                   display="flex"
-                  className="max-w-full mt-20"
+                  className="max-w-full mt-16"
                   flexDirection="column"
                 >
                   {children}
